@@ -106,9 +106,9 @@ properties:
       - TK
       - TP53
       - myc Family
-      - not reported
-      - not allowed to collect
-      - pending
+      - Not Reported
+      - Not Allowed To Collect
+      - Pending
 
   biomarker_result:
     term:
@@ -120,9 +120,9 @@ properties:
       - Normal
       - Other
       - Translocation
-      - not reported
-      - not allowed to collect
-      - pending
+      - Not Reported
+      - Not Allowed To Collect
+      - Pending
 
   biomarker_test_method:
     term:
@@ -137,9 +137,148 @@ properties:
       - Other
       - RT-PCR
       - Southern
-      - not reported
-      - not allowed to collect
-      - pending
+      - Not Reported
+      - Not Allowed To Collect
+      - Pending
+
+  cea_level_preoperative:
+    term:
+      $ref: "_terms.yaml#/cea_level_preoperative"
+    type: number
+
+  dlco_ref_predictive_%:
+    term:
+      $ref: "_terms.yaml#/dlco_ref_predictive_%"
+    type: number
+
+  estrogen_receptor_percent_positive_ihc:
+    term:
+      $ref: "_terms.yaml#/estrogen_receptor_percent_positive_ihc"
+    enum:
+      - 1-10%
+      - 10-19%
+      - 11-20%
+      - 20-29%
+      - 21-30%
+      - 30-39%
+      - 31-40%
+      - 40-49%
+      - 41-50%
+      - 50-59%
+      - 51-60%
+      - 60-69%
+      - 61-70%
+      - 70-79%
+      - 71-80%
+      - 80-89%
+      - 81-90%
+      - 90-100%
+      - 90-99%
+      - 91-100%
+      - <1%
+      - <10%
+      - Unknown
+      - Not Reported
+      - Not Allowed To Collect
+
+  estrogen_receptor_result_ihc:
+    term:
+      $ref: "_terms.yaml#/estrogen_receptor_result_ihc"
+    enum:
+      - Borderline
+      - Equivocal
+      - Indeterminate
+      - Negative
+      - Not Performed
+      - Performed but Not Available
+      - Positive
+      - Unknown
+      - Not Reported
+      - Not Allowed To Collect
+
+  fev1_ref_post_bronch_%:
+    term:
+      $ref: "_terms.yaml#/fev1_ref_post_bronch_%"
+    type: number
+
+  fev1_ref_pre_bronch_%:
+    term:
+      $ref: "_terms.yaml#/fev1_ref_pre_bronch_%"
+    type: number
+
+  fev1_fvc_post_bronch_%:
+    term:
+      $ref: "_terms.yaml#/fev1_fvc_post_bronch_%"
+    type: number
+
+  fev1_fvc_pre_bronch_%:
+    term:
+      $ref: "_terms.yaml#/fev1_fvc_pre_bronch_%"
+    type: number
+
+  her2_erbb2_percent_positive_ihc:
+    term:
+      $ref: "_terms.yaml#/her2_erbb2_percent_positive_ihc"
+    enum:
+      - 1-10%
+      - 10-19%
+      - 11-20%
+      - 20-29%
+      - 21-30%
+      - 30-39%
+      - 31-40%
+      - 40-49%
+      - 41-50%
+      - 50-59%
+      - 51-60%
+      - 60-69%
+      - 61-70%
+      - 70-79%
+      - 71-80%
+      - 80-89%
+      - 81-90%
+      - 90-100%
+      - 90-99%
+      - 91-100%
+      - <1%
+      - <10%
+      - Unknown
+      - Not Reported
+      - Not Allowed To Collect
+
+  her2_erbb2_result_fish:
+    term:
+      $ref: "_terms.yaml#/her2_erbb2_result_fish"
+    enum:
+      - Amplified
+      - Equivocal
+      - Indeterminate
+      - Negative
+      - Never Done or Unknown
+      - Non Interpretable
+      - Not Amplified
+      - Not Done
+      - Performed but Not Available
+      - Positive
+      - Unknown
+      - Not Reported
+      - Not Allowed To Collect
+
+
+  her2_erbb2_result_ihc:
+    term:
+      $ref: "_terms.yaml#/her2_erbb2_result_ihc"
+    enum:
+      - Borderline
+      - Equivocal
+      - Indeterminate
+      - Negative
+      - Not Performed
+      - Performed but Not Available
+      - Positive
+      - Unknown
+      - Not Reported
+      - Not Allowed To Collect
 
   ldh_level_at_diagnosis:
     term:
@@ -150,6 +289,61 @@ properties:
     term:
       $ref: "_terms.yaml#/ldh_normal_range_upper"
     type: number
+
+  microsatellite_instability_abnormal:
+    term:
+      $ref: "_terms.yaml#/microsatellite_instability_abnormal"
+    enum:
+      - "Yes"
+      - "No"
+      - Unknown
+      - Not Reported
+      - Not Allowed To Collect
+
+  progesterone_receptor_percent_positive_ihc:
+    term:
+      $ref: "_terms.yaml#/progesterone_receptor_percent_positive_ihc"
+    enum:
+      - 1-10%
+      - 10-19%
+      - 11-20%
+      - 20-29%
+      - 21-30%
+      - 30-39%
+      - 31-40%
+      - 40-49%
+      - 41-50%
+      - 50-59%
+      - 51-60%
+      - 60-69%
+      - 61-70%
+      - 70-79%
+      - 71-80%
+      - 80-89%
+      - 81-90%
+      - 90-100%
+      - 90-99%
+      - 91-100%
+      - <1%
+      - <10%
+      - Unknown
+      - Not Reported
+      - Not Allowed To Collect
+
+  progesterone_receptor_result_ihc:
+    term:
+      $ref: "_terms.yaml#/progesterone_receptor_result_ihc"
+    enum:
+      - Borderline
+      - Equivocal
+      - Indeterminate
+      - Negative
+      - Not Performed
+      - Performed but Not Available
+      - Positive
+      - Unknown
+      - Not Reported
+      - Not Allowed To Collect
 
   cases:
     $ref: "_definitions.yaml#/to_one"
