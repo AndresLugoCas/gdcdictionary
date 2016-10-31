@@ -24,12 +24,21 @@ systemProperties:
   - error_type
 
 links:
-  - name: somatic_mutation_calling_workflows
-    backref: simple_somatic_mutations
-    label: data_from
-    target_type: somatic_mutation_calling_workflow
-    multiplicity: many_to_one
+  - exclusive: true
     required: true
+    subgroup:
+      - name: somatic_mutation_calling_workflows
+        backref: simple_somatic_mutations
+        label: data_from
+        target_type: somatic_mutation_calling_workflow
+        multiplicity: many_to_one
+        required: false
+      - name: genomic_profile_harmonization_workflows
+        backref: simple_somatic_mutations
+        label: data_from
+        target_type: genomic_profile_harmonization_workflow
+        multiplicity: one_to_one
+        required: false
 
 required:
   - submitter_id
@@ -40,7 +49,6 @@ required:
   - data_type
   - data_format
   - experimental_strategy
-  - somatic_mutation_calling_workflows
 
 uniqueKeys:
   - [ id ]
@@ -74,4 +82,6 @@ properties:
       - Validation
       - Targeted Sequencing
   somatic_mutation_calling_workflows:
+    $ref: "_definitions.yaml#/to_one"
+  genomic_profile_harmonization_workflows:
     $ref: "_definitions.yaml#/to_one"

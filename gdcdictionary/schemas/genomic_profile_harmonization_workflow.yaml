@@ -8,7 +8,7 @@ category: analysis
 program: '*'
 project: '*'
 description: >
-  Metadata for the harmonization of FoundationOne Genomic Profiling reports.
+  Metadata for the harmonization of genomic profiling reports.
 additionalProperties: false
 submittable: false
 validators: null
@@ -32,6 +32,7 @@ required:
   - submitter_id
   - workflow_link
   - workflow_type
+  - submitted_genomic_profiles
   
 uniqueKeys:
   - [ id ]

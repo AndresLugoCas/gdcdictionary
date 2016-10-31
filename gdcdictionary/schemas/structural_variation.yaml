@@ -8,7 +8,7 @@ category: data_file
 program: '*'
 project: '*'
 description: >
-  Data file containing the structural variation data from the FoundationOne Reports.
+  Data file containing the structural variation data. 
 additionalProperties: false
 submittable: false
 validators: null
@@ -25,7 +25,7 @@ systemProperties:
 links:
   - name: genomic_profile_harmonization_workflows
     backref: structural_variations
-    label: derived_from
+    label: data_from
     target_type: genomic_profile_harmonization_workflow
     multiplicity: one_to_one
     required: true
