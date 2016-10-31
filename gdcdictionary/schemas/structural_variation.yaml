@@ -47,7 +47,7 @@ required:
 properties:
   $ref: "_definitions.yaml#/data_file_properties"
   type:
-    enum: [ "copy_number_segment" ]
+    enum: [ "structural_variation" ]
   data_category:
     term:
       $ref: "_terms.yaml#/data_category"
@@ -57,16 +57,15 @@ properties:
     term:
       $ref: "_terms.yaml#/data_type"
     enum:
-      - FoundationOne Rearrangement
+      - Structural Rearrangement
   data_format:
     term:
       $ref: "_terms.yaml#/data_format"
     enum:
-      - TSV
-      - VCF
-  platform:
+      - GVF
+  experimental_strategy:
     term:
-      $ref: "_terms.yaml#/platform"
+      $ref: "_terms.yaml#/experimental_strategy"
     enum:
       - Targeted Sequencing
   genomic_profile_harmonization_workflows:
