@@ -124,6 +124,13 @@ properties:
     default: false
     type: boolean
 
+  releasable:
+    description: |
+      To be releasable means that an authorized user is allowed to set
+      `released` to true.
+    default: false
+    type: boolean
+
   intended_release_date:
     description: Tracks a Project's intended release date.
     type: string
